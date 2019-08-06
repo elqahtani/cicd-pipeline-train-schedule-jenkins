@@ -1,0 +1,14 @@
+[Unit]
+Description=Train Schedule.service - making your environment variables rad
+Documentation=https://example.com
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/train-schedule
+ExecStart=/usr/bin/node /opt/train-schedule/bin/www
+Restart=on-failure
+User=deploy
+Environment=NODE_PORT=3000
+
+[Install]
+WantedBy=multi-user.target
